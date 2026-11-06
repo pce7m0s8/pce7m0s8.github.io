@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91传媒-传媒内容平台_内容浏览与栏目导航</title>
+<meta name="description" content="91传媒主题首页，提供内容栏目导航、浏览入口与平台介绍，帮助访问者快速了解91传媒的内容组织与使用路径。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0e1117;--panel:#161b24;--panel2:#1c2330;--line:#28303d;
+--txt:#e6eaf2;--sub:#9aa6b8;--acc:#f2a93b;--acc2:#e0672f;
+--rad:14px;
+}
+body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(14,17,23,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.logo .mark{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center}
+.logo .mark svg{width:19px;height:19px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{font-size:14px;color:var(--sub);padding:7px 11px;border-radius:8px;transition:.2s}
+nav a:hover{color:var(--txt);background:var(--panel2)}
+.search{display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.search input{background:transparent;border:0;outline:0;color:var(--txt);padding:8px 12px;width:150px;font-size:13px}
+.search input::placeholder{color:#5f6b7d}
+.search button{background:var(--acc);border:0;color:#1a1206;font-weight:700;font-size:13px;padding:8px 13px;cursor:pointer}
+.search button:hover{background:#ffbc55}
+.hero{padding:56px 0 44px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(242,169,59,.14),transparent 68%);pointer-events:none}
+.hero .tag{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--acc);border:1px solid rgba(242,169,59,.4);border-radius:20px;padding:3px 13px;margin-bottom:18px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.25;font-weight:800;letter-spacing:1px;margin-bottom:16px}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--sub);font-size:16px;max-width:620px;margin-bottom:26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;font-size:15px;font-weight:600;transition:.2s;border:1px solid transparent}
+.btn-main{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#1a1206}
+.btn-main:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--txt);background:var(--panel)}
+.btn-ghost:hover{border-color:var(--acc);color:var(--acc)}
+.stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:36px}
+.stat b{display:block;font-size:24px;color:var(--acc);font-weight:800}
+.stat span{font-size:13px;color:var(--sub)}
+section{padding:52px 0}
+.sec-hd{margin-bottom:26px}
+.sec-hd h2{font-size:23px;font-weight:700;letter-spacing:.5px}
+.sec-hd p{color:var(--sub);font-size:14px;margin-top:6px}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);padding:22px;transition:.22s}
+.card:hover{border-color:rgba(242,169,59,.5);transform:translateY(-3px);background:var(--panel2)}
+.card .ico{width:38px;height:38px;border-radius:10px;background:rgba(242,169,59,.12);display:grid;place-items:center;margin-bottom:14px}
+.card .ico svg{width:20px;height:20px;stroke:var(--acc);fill:none;stroke-width:1.7}
+.card h3{font-size:16px;margin-bottom:8px;font-weight:700}
+.card p{font-size:14px;color:var(--sub)}
+.card .lnk{display:inline-block;margin-top:14px;font-size:13px;color:var(--acc);font-weight:600}
+.list{display:grid;gap:0;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:76px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line);transition:.2s}
+.item:hover{background:rgba(255,255,255,.02)}
+.item .no{font-size:20px;font-weight:800;color:#3b4554;font-family:Georgia,serif}
+.item h3{font-size:15px;font-weight:600;margin-bottom:3px}
+.item p{font-size:13px;color:var(--sub)}
+.item .meta{font-size:12px;color:#5f6b7d;white-space:nowrap}
+.about{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);padding:30px}
+.about p{color:#c2ccdb;font-size:15px;margin-bottom:14px}
+.about p:last-child{margin-bottom:0}
+.about strong{color:var(--acc)}
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+.panelbox{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);padding:24px}
+.panelbox h3{font-size:17px;margin-bottom:14px}
+.qa{border-bottom:1px dashed var(--line);padding:13px 0}
+.qa:last-child{border:0;padding-bottom:0}
+.qa h4{font-size:14px;font-weight:600;margin-bottom:5px;color:var(--txt)}
+.qa p{font-size:13.5px;color:var(--sub)}
+footer{border-top:1px solid var(--line);padding:34px 0 40px;background:#0a0d12}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ft .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;margin-bottom:10px}
+.ft .brand .mark{width:26px;height:26px;flex:0 0 26px;border-radius:7px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center}
+.ft .brand .mark svg{width:15px;height:15px}
+.ft p{font-size:13px;color:#66717f;max-width:400px}
+.ft nav{flex-direction:column;gap:8px;align-items:flex-start}
+.ft nav a{font-size:13px;color:#7d8898;padding:0}
+.ft nav a:hover{color:var(--acc);background:none}
+.copy{margin-top:26px;padding-top:18px;border-top:1px solid #1b222c;font-size:12px;color:#4d5766;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:880px){
+.g3{grid-template-columns:1fr 1fr}
+.split{grid-template-columns:1fr}
+.hd{flex-wrap:wrap;height:auto;padding:12px 0;gap:10px}
+nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+nav a{white-space:nowrap}
+.search{order:2}
+.search input{width:110px}
+}
+@media(max-width:560px){
+.g3,.g2{grid-template-columns:1fr}
+.hero{padding:38px 0 32px}
+.stats{gap:22px}
+.item{grid-template-columns:48px 1fr;gap:10px}
+.item .meta{grid-column:2;font-size:11px}
+section{padding:40px 0}
+.about,.panelbox{padding:20px}
+}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f2a93b'/%3E%3Cpath d='M20 44V20h6v9h12v-9h6v24h-6v-9H26v9z' fill='%231a1206'/%3E%3C/svg%3E">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#1a1206" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 10h3M8 14h6M15 9l2 3-2 3"/></svg></span>
+      91传媒
+    </a>
+    <nav>
+      <a href="#channels">内容栏目</a>
+      <a href="#feed">精选浏览</a>
+      <a href="#about">平台简介</a>
+      <a href="#qa">常见问题</a>
+      <a href="#download">客户端</a>
+    </nav>
+    <form class="search" onsubmit="return doSearch(event)">
+      <input id="q" type="search" placeholder="搜索栏目或内容" aria-label="搜索栏目或内容">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="tag">内容平台 · 主题首页</span>
+      <h1>91传媒</h1>
+      <p class="lead">91传媒是一个以内容栏目组织为核心的浏览平台。首页汇集栏目导航、精选内容与使用说明，帮助访问者快速找到自己关心的方向，并在清晰的路径中完成浏览。</p>
+      <div class="cta">
+        <a class="btn btn-main" href="#channels">进入内容栏目</a>
+        <a class="btn btn-ghost" href="#about">了解平台</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>6</b><span>内容栏目</span></div>
+        <div class="stat"><b>按主题</b><span>分类组织</span></div>
+        <div class="stat"><b>多端</b><span>适配浏览</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-hd">
+        <h2>内容栏目</h2>
+        <p>91传媒按主题划分栏目，每个栏目聚焦一类内容方向，便于按需进入。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></svg></div>
+          <h3>资讯速览</h3>
+          <p>汇总近期内容要点，用短条目呈现核心信息，适合快速浏览与了解概况。</p>
+          <a class="lnk" href="#feed">查看精选 →</a>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg></div>
+          <h3>影像专区</h3>
+          <p>围绕影像内容展开，侧重画面与片段，提供按主题分类的浏览入口。</p>
+          <a class="lnk" href="#feed">查看精选 →</a>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+          <h3>专题合集</h3>
+          <p>把同一主题下的多条内容归入合集，减少反复检索，方便连续阅读。</p>
+          <a class="lnk" href="#feed">查看精选 →</a>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-2.8L7 19l1-6-4-4 5.5-.5z"/></svg></div>
+          <h3>热门排行</h3>
+          <p>按访问热度呈现内容排序，作为发现方向的辅助参考，排序会随浏览变化。</p>
+          <a class="lnk" href="#feed">查看精选 →</a>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16"/><path d="M8 15l3-4 3 3 4-6"/></svg></div>
+          <h3>数据观察</h3>
+          <p>以栏目维度的浏览情况归纳趋势，帮助理解内容分布与关注重点。</p>
+          <a class="lnk" href="#feed">查看精选 →</a>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 4v10m0 0l-4-4m4 4l4-4"/><path d="M5 18h14"/></svg></div>
+          <h3>客户端下载</h3>
+          <p>桌面与移动端浏览入口统一，下载入口将在可用后开放，页面内先行说明。</p>
+          <a class="lnk" href="#download">前往下载 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="feed">
+    <div class="wrap">
+      <div class="sec-hd">
+        <h2>精选浏览</h2>
+        <p>以下条目为首页重点内容示例，按栏目归类，点击条目可回到对应分区继续浏览。</p>
+      </div>
+      <div class="list">
+        <a class="item" href="#channels">
+          <span class="no">01</span>
+          <div><h3>栏目导航：从主题进入而不是从列表翻找</h3><p>91传媒把零散内容归入固定栏目，访问者先选方向，再看具体条目。</p></div>
+          <span class="meta">栏目 · 导航</span>
+        </a>
+        <a class="item" href="#channels">
+          <span class="no">02</span>
+          <div><h3>影像专区的组织方式：按主题而非按时间</h3><p>同一主题的影像内容集中放置，减少跨页跳转，便于连续观看。</p></div>
+          <span class="meta">影像 · 组织</span>
+        </a>
+        <a class="item" href="#channels">
+          <span class="no">03</span>
+          <div><h3>专题合集如何减少重复检索</h3><p>合集把相关内容一次列出，访问者不必反复输入关键词查找。</p></div>
+          <span class="meta">合集 · 检索</span>
+        </a>
+        <a class="item" href="#channels">
+          <span class="no">04</span>
+          <div><h3>热门排行的参考边界</h3><p>排行基于访问热度，只作发现方向的辅助，不构成内容质量评价。</p></div>
+          <span class="meta">排行 · 说明</span>
+        </a>
+        <a class="item" href="#qa">
+          <span class="no">05</span>
+          <div><h3>使用前需要了解的几条说明</h3><p>关于栏目更新、搜索范围与下载入口的状态，集中在常见问题中说明。</p></div>
+          <span class="meta">说明 · 须知</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="split">
+        <div class="about">
+          <h2 style="font-size:20px;margin-bottom:16px">平台简介</h2>
+          <p>91传媒以栏目化的方式组织内容，首页承担三件事：说明平台定位、给出栏目入口、提供使用说明。访问者无需逐条翻找，先确定方向即可进入对应分区。</p>
+          <p>在内容呈现上，<strong>91传媒</strong>强调结构清晰：栏目名称直接对应内容方向，条目摘要说明该条内容讲什么，避免只给标题不给线索。搜索框用于在栏目与条目范围内查找，输入关键词后页面会定位到相关分区。</p>
+          <p>关于更新节奏与内容范围，本页仅描述当前可见的栏目结构，不对具体更新时间、数量增长作出承诺。下载入口暂未开放，按钮以禁用状态呈现，待地址可用后替换。91传媒的页面适配桌面与移动端，小屏下导航横向排列，正文保持舒适行长。</p>
+          <p>如果你是第一次访问，建议先读栏目介绍，再用精选浏览中的条目建立整体印象；如果已有明确方向，可直接使用顶部搜索或导航跳转。91传媒希望把浏览路径缩短，让内容本身成为页面的主角。</p>
+        </div>
+        <aside class="panelbox" id="download">
+          <h3>客户端下载</h3>
+          <p style="font-size:14px;color:var(--sub);margin-bottom:16px">桌面与移动端统一入口。当前下载地址尚未就绪，按钮暂不可用，开放后在此处更新。</p>
+          <a class="btn btn-main" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;opacity:.75">下载</a>
+          <div style="margin-top:22px;border-top:1px solid var(--line);padding-top:16px">
+            <h3 style="font-size:15px;margin-bottom:10px">浏览提示</h3>
+            <p style="font-size:13.5px;color:var(--sub)">使用顶部搜索可快速定位栏目；导航锚点在本页内跳转；条目摘要用于判断是否继续阅读。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="qa">
+    <div class="wrap">
+      <div class="sec-hd">
+        <h2>常见问题</h2>
+        <p>围绕91传媒首页的使用方式，整理访问者最常提出的问题。</p>
+      </div>
+      <div class="grid g2">
+        <div class="panelbox">
+          <div class="qa"><h4>91传媒首页主要提供什么？</h4><p>提供栏目导航、精选条目与使用说明三部分内容，帮助访问者确定浏览方向。</p></div>
+          <div class="qa"><h4>搜索能查到什么范围？</h4><p>搜索作用于本页的栏目名称与条目摘要，输入后会定位到匹配的分区。</p></div>
+          <div class="qa"><h4>排行是否代表内容质量？</h4><p>不代表。排行依据访问热度，仅作为发现方向的辅助参考。</p></div>
+        </div>
+        <div class="panelbox">
+          <div class="qa"><h4>下载按钮为什么不可点击？</h4><p>下载地址尚未就绪，按钮处于禁用状态，开放后会在同一位置更新。</p></div>
+          <div class="qa"><h4>手机端浏览是否完整？</h4><p>页面针对小屏调整了导航、字号与卡片排列，主要内容与桌面端一致。</p></div>
+          <div class="qa"><h4>内容更新频率如何？</h4><p>本页不承诺固定更新节奏，仅呈现当前可见的栏目结构与条目示例。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="brand">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#1a1206" stroke-width="2.4" stroke-linecap="round"><path d="M7 17V7h4v10M13 7h4v10"/></svg></span>
+          91传媒
+        </div>
+        <p>以栏目组织内容、以摘要引导阅读。91传媒首页为访问者提供清晰的导航路径与使用说明。</p>
+      </div>
+      <nav>
+        <a href="#channels">内容栏目</a>
+        <a href="#feed">精选浏览</a>
+        <a href="#about">平台简介</a>
+        <a href="#qa">常见问题</a>
+        <a href="#download">客户端下载</a>
+      </nav>
+    </div>
+    <div class="copy">
+      <span>© 91传媒 · 主题首页</span>
+      <span>栏目导航 · 精选内容 · 使用说明</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function doSearch(e){
+  e.preventDefault();
+  var v=(document.getElementById('q').value||'').trim();
+  if(!v){location.hash='channels';return false;}
+  var map=[['资讯','channels'],['栏目','channels'],['影像','feed'],['专题','feed'],['排行','feed'],['数据','feed'],['下载','download'],['简介','about'],['问题','qa'],['搜索','channels']];
+  var target='channels';
+  for(var i=0;i<map.length;i++){if(v.indexOf(map[i][0])>-1){target=map[i][1];break;}}
+  location.hash=target;
+  return false;
+}
+</script>
+</body>
+</html>
