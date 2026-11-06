@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料正能量-黑料正能量热点内容_网络热点盘点</title>
+<meta name="description" content="黑料正能量主题首页，汇集网络热点内容与正能量的解读视角，提供热点条目、观点卡片与内容分区，帮助访客快速浏览与理解热门讨论中的关键信息。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2937'/%3E%3Cpath d='M32 12l6.5 13.2 14.5 2.1-10.5 10.2 2.5 14.4L32 45.4 19 51.9l2.5-14.4L11 27.3l14.5-2.1z' fill='%23f2b705'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#1f2937;
+    --ink-soft:#4b5563;
+    --paper:#fbf8f3;
+    --card:#ffffff;
+    --line:#e7e1d8;
+    --gold:#c9942a;
+    --gold-soft:#f4e6c4;
+    --deep:#23324a;
+    --accent:#b4532f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,248,243,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding:14px 0;
+  }
+  .brand{display:flex;align-items:center;gap:11px;flex-shrink:0;}
+  .brand-mark{
+    width:40px;height:40px;border-radius:11px;
+    background:linear-gradient(150deg,#2b3a54,#1f2937);
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .brand-text{
+    font-size:19px;font-weight:800;letter-spacing:.02em;
+    color:var(--deep);white-space:nowrap;
+  }
+  nav.main{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  nav.main a{
+    font-size:14.5px;color:var(--ink-soft);padding:7px 12px;border-radius:8px;
+    transition:background .18s,color .18s;white-space:nowrap;
+  }
+  nav.main a:hover{background:var(--gold-soft);color:var(--deep);}
+  .nav-cta{
+    background:var(--deep);color:#fff !important;font-weight:600;
+    padding:8px 16px !important;border-radius:9px;
+  }
+  .nav-cta:hover{background:#2f4363 !important;color:#fff !important;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(700px 300px at 88% -10%,rgba(201,148,42,.20),transparent 70%),
+      radial-gradient(500px 260px at 4% 110%,rgba(180,83,47,.14),transparent 70%),
+      linear-gradient(180deg,#fffdf9,#f7f2e9);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:44px;
+    align-items:center;padding:62px 0 58px;
+  }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;color:var(--accent);
+    background:#fbeee6;border:1px solid #f0d8c9;
+    padding:5px 13px;border-radius:999px;margin-bottom:20px;
+  }
+  .hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:block;}
+  h1{
+    font-size:clamp(30px,4.4vw,46px);
+    font-weight:900;line-height:1.22;letter-spacing:.01em;
+    color:var(--deep);margin-bottom:20px;
+  }
+  h1 .hl{
+    background:linear-gradient(180deg,transparent 62%,var(--gold-soft) 62%);
+    padding:0 4px;
+  }
+  .hero-lead{
+    font-size:16.5px;color:var(--ink-soft);max-width:33em;margin-bottom:26px;
+  }
+  .hero-lead strong{color:var(--deep);font-weight:700;}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:15px;font-weight:600;padding:12px 24px;border-radius:10px;
+    transition:transform .16s,box-shadow .16s,background .16s;
+  }
+  .btn-primary{
+    background:var(--deep);color:#fff;
+    box-shadow:0 6px 18px -8px rgba(35,50,74,.7);
+  }
+  .btn-primary:hover{transform:translateY(-1px);background:#2f4363;box-shadow:0 10px 22px -10px rgba(35,50,74,.8);}
+  .btn-ghost{
+    background:#fff;color:var(--deep);border:1px solid var(--line);
+  }
+  .btn-ghost:hover{background:#fff8ea;border-color:var(--gold);}
+  .btn[aria-disabled="true"]{
+    opacity:.85;cursor:default;pointer-events:none;
+  }
+  .hero-stats{
+    display:flex;gap:26px;margin-top:32px;flex-wrap:wrap;
+    border-top:1px dashed var(--line);padding-top:20px;
+  }
+  .stat b{display:block;font-size:21px;font-weight:800;color:var(--deep);line-height:1.3;}
+  .stat span{font-size:12.5px;color:#8b8378;letter-spacing:.03em;}
+
+  .hero-art{
+    background:linear-gradient(160deg,#243350,#1a2333);
+    border-radius:20px;padding:26px;color:#e8eef8;
+    box-shadow:0 24px 50px -26px rgba(26,35,51,.75);
+    position:relative;overflow:hidden;
+  }
+  .hero-art::after{
+    content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;
+    border-radius:50%;background:radial-gradient(circle,rgba(201,148,42,.45),transparent 68%);
+  }
+  .art-title{font-size:13px;letter-spacing:.16em;color:#c9b48a;font-weight:600;margin-bottom:16px;}
+  .art-list{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1;}
+  .art-item{
+    display:flex;gap:11px;align-items:flex-start;
+    background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);
+    border-radius:11px;padding:11px 13px;
+  }
+  .art-item .dot{
+    width:22px;height:22px;border-radius:7px;flex-shrink:0;margin-top:2px;
+    background:rgba(201,148,42,.22);display:grid;place-items:center;
+    font-size:11px;font-weight:800;color:#f2c96b;
+  }
+  .art-item p{font-size:13.5px;line-height:1.55;color:#cfd8e6;}
+  .art-item p b{color:#fff;font-weight:700;}
+
+  /* ---------- section base ---------- */
+  section{padding:62px 0;}
+  section.alt{background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:34px;max-width:44em;}
+  .sec-kicker{
+    font-size:12.5px;font-weight:700;letter-spacing:.18em;color:var(--gold);
+    margin-bottom:9px;text-transform:uppercase;
+  }
+  h2{
+    font-size:clamp(22px,2.7vw,29px);font-weight:800;color:var(--deep);
+    line-height:1.35;margin-bottom:12px;
+  }
+  .sec-desc{font-size:15.5px;color:var(--ink-soft);}
+
+  /* ---------- cards ---------- */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:15px;
+    padding:24px 22px;transition:transform .18s,box-shadow .18s,border-color .18s;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(35,50,74,.5);border-color:#d8cdb9;}
+  .card-icon{
+    width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    background:#fdf3e0;margin-bottom:16px;
+  }
+  .card h3{font-size:17px;font-weight:800;color:var(--deep);margin-bottom:9px;line-height:1.4;}
+  .card p{font-size:14.5px;color:var(--ink-soft);}
+  .card .meta{
+    display:inline-block;margin-top:14px;font-size:12.5px;font-weight:600;
+    color:var(--accent);background:#fbeee6;padding:3px 10px;border-radius:6px;
+  }
+
+  /* ---------- feature list ---------- */
+  .feature{
+    display:grid;grid-template-columns:1fr 1fr;gap:30px 42px;align-items:start;
+  }
+  .feature-item{display:flex;gap:15px;}
+  .fnum{
+    flex-shrink:0;width:34px;height:34px;border-radius:9px;
+    background:var(--deep);color:#f2c96b;display:grid;place-items:center;
+    font-size:14px;font-weight:800;
+  }
+  .feature-item h3{font-size:16px;font-weight:800;color:var(--deep);margin-bottom:6px;}
+  .feature-item p{font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- topics table-ish ---------- */
+  .topic-list{display:flex;flex-direction:column;gap:12px;}
+  .topic{
+    display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:13px;
+    padding:16px 20px;transition:border-color .18s,background .18s;
+  }
+  .topic:hover{border-color:var(--gold);background:#fffaf0;}
+  .tno{
+    font-size:15px;font-weight:800;color:var(--gold);
+    font-variant-numeric:tabular-nums;letter-spacing:.02em;
+  }
+  .tbody h3{font-size:15.5px;font-weight:700;color:var(--deep);margin-bottom:3px;}
+  .tbody p{font-size:13.5px;color:var(--ink-soft);}
+  .ttag{
+    font-size:12px;font-weight:600;color:var(--deep);
+    background:var(--gold-soft);border-radius:6px;padding:4px 11px;white-space:nowrap;
+  }
+
+  /* ---------- quote ---------- */
+  .quote-box{
+    background:linear-gradient(155deg,#243350,#1c2739);
+    border-radius:18px;padding:38px 36px;color:#dbe4f2;
+    display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;
+  }
+  .quote-mark{font-size:60px;line-height:.8;color:#c9942a;font-weight:900;font-family:Georgia,serif;}
+  .quote-box p{font-size:16px;line-height:1.85;color:#dbe4f2;}
+  .quote-box p + p{margin-top:14px;font-size:14px;color:#9fadc2;}
+  .quote-box strong{color:#fff;}
+
+  /* ---------- faq ---------- */
+  .faq{display:flex;flex-direction:column;gap:14px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:0 20px;transition:border-color .18s;
+  }
+  details[open]{border-color:var(--gold);}
+  summary{
+    cursor:pointer;list-style:none;padding:17px 0;
+    font-size:15.5px;font-weight:700;color:var(--deep);
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:20px;font-weight:400;color:var(--gold);flex-shrink:0;
+    transition:transform .2s;
+  }
+  details[open] summary::after{content:"−";}
+  details .answer{
+    font-size:14.5px;color:var(--ink-soft);
+    padding:0 0 18px;border-top:1px dashed var(--line);padding-top:14px;
+  }
+
+  /* ---------- download band ---------- */
+  .band{
+    background:#fffdf8;border:1px solid var(--line);border-radius:18px;
+    padding:34px 34px;display:flex;align-items:center;justify-content:space-between;
+    gap:26px;flex-wrap:wrap;
+  }
+  .band h2{font-size:21px;margin-bottom:7px;}
+  .band p{font-size:14.5px;color:var(--ink-soft);max-width:36em;}
+
+  /* ---------- footer ---------- */
+  footer.site{
+    background:#1c2536;color:#a9b5c8;padding:44px 0 26px;margin-top:0;
+  }
+  .foot-top{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;
+    padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.09);
+  }
+  .foot-brand{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
+  .foot-brand .brand-mark{width:36px;height:36px;border-radius:10px;}
+  .foot-brand .brand-text{color:#fff;font-size:17px;}
+  .foot-top p{font-size:13.5px;line-height:1.8;color:#8e9bb0;max-width:30em;}
+  .foot-col h4{
+    font-size:13px;font-weight:700;color:#e5ecf6;letter-spacing:.08em;
+    margin-bottom:13px;
+  }
+  .foot-col a{display:block;font-size:13.5px;color:#8e9bb0;padding:4px 0;transition:color .16s;}
+  .foot-col a:hover{color:#f2c96b;}
+  .foot-bottom{
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding-top:20px;font-size:12.5px;color:#6f7d93;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;padding:44px 0 46px;}
+    .grid-3{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+    .feature{grid-template-columns:1fr;gap:24px;}
+    .foot-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .head-inner{flex-wrap:wrap;gap:10px;padding:12px 0;}
+    nav.main{width:100%;justify-content:flex-start;gap:2px;overflow-x:auto;padding-bottom:2px;}
+    nav.main a{font-size:13.5px;padding:6px 9px;}
+    .brand-text{font-size:17px;}
+    section{padding:46px 0;}
+    .hero-lead{font-size:15.5px;}
+    .hero-stats{gap:20px;}
+    .quote-box{grid-template-columns:1fr;gap:10px;padding:28px 22px;}
+    .quote-mark{font-size:44px;}
+    .topic{grid-template-columns:40px 1fr;row-gap:8px;}
+    .ttag{grid-column:2;justify-self:start;}
+    .band{padding:26px 22px;}
+    .foot-top{grid-template-columns:1fr;gap:24px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top" aria-label="黑料正能量 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.6l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.6l-5.4 2.9 1-6.1L3.2 9.1l6.1-.9L12 2.6z" fill="#f2c96b"/>
+        </svg>
+      </span>
+      <span class="brand-text">黑料正能量</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#value">解读视角</a>
+      <a href="#topics">热点条目</a>
+      <a href="#method">阅读方式</a>
+      <a href="#faq">常见疑问</a>
+      <a href="#download" class="nav-cta">获取内容卡</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-tag"><i></i>热点内容 · 正向解读</span>
+        <h1>黑料正能量</h1>
+        <p class="hero-lead">
+          面对铺天盖地的网络爆料与热门讨论，<strong>黑料正能量</strong>把注意力放在信息本身：先看事实说了什么，再看讨论走向哪里。这里把零散的热点条目重新编排成可读的线索，让你在几分钟内抓住事件轮廓，而不是被情绪推着走。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#topics">
+            浏览热点条目
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#value">了解解读视角</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>4</b><span>内容分区</span></div>
+          <div class="stat"><b>6</b><span>热点条目</span></div>
+          <div class="stat"><b>1</b><span>统一判断标准</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-art" aria-label="内容示例">
+        <div class="art-title">今日条目速览</div>
+        <div class="art-list">
+          <div class="art-item">
+            <span class="dot">01</span>
+            <p><b>先看来源</b>——爆料截图与转述哪个在前，决定了后面所有讨论的起点。</p>
+          </div>
+          <div class="art-item">
+            <span class="dot">02</span>
+            <p><b>再看语境</b>——同一句话脱离上下文，含义会完全翻转。</p>
+          </div>
+          <div class="art-item">
+            <span class="dot">03</span>
+            <p><b>最后看影响</b>——讨论落在当事人身上，还是落在公共议题上。</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- VALUE -->
+  <section id="value">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Reading Lens</div>
+        <h2>把黑料正能量当作一种阅读顺序</h2>
+        <p class="sec-desc">同一个热点，有人只看标题，有人看完整条时间线。黑料正能量不提供结论，而是提供一套固定的浏览顺序，让每一次点开都有可复用的判断路径。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#c9942a" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="#c9942a" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>先定位起点</h3>
+          <p>每条热点都标注它最早出现的位置：是当事人回应、媒体报道，还是匿名转述。起点不同，后续信息的可信度层级也不同。</p>
+          <span class="meta">信息溯源</span>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M4 19V6M4 19h16" stroke="#c9942a" stroke-width="2" stroke-linecap="round"/><path d="M8 15l3.5-4 3 2.5L19 8" stroke="#c9942a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>把情绪拆出去</h3>
+          <p>把评论区的情绪化表达单独拎出来看，剩下的具体事实往往只有几条。黑料正能量关注的是那几条，而不是音量最大的那一句。</p>
+          <span class="meta">事实剥离</span>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V7l7-4z" stroke="#c9942a" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#c9942a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>留出正向出口</h3>
+          <p>讨论之后总要有落点：是对当事人的提醒、对平台的建议，还是对自己的约束。正能量在这里体现为一句可执行的下一步。</p>
+          <span class="meta">行动落点</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section id="topics" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Hot Entries</div>
+        <h2>热点条目：六条正在被讨论的线索</h2>
+        <p class="sec-desc">以下条目按讨论热度排列，每条只保留可以复述的要点。点开讨论前，先读这一行，能省下不少来回翻找的时间。</p>
+      </div>
+      <div class="topic-list">
+        <div class="topic">
+          <span class="tno">01</span>
+          <div class="tbody">
+            <h3>截图传播链的断点</h3>
+            <p>一张截图经过三次转述后，原始出处往往已经找不到。黑料正能量提醒：转发前先问一句「这张图最早发在哪」。</p>
+          </div>
+          <span class="ttag">溯源</span>
+        </div>
+        <div class="topic">
+          <span class="tno">02</span>
+          <div class="tbody">
+            <h3>当事人回应的时间差</h3>
+            <p>回应来得越晚，中间空白期就越容易被各种猜测填满。把时间线摊开，能够看清哪些说法属于补充，哪些属于反转。</p>
+          </div>
+          <span class="ttag">时间线</span>
+        </div>
+        <div class="topic">
+          <span class="tno">03</span>
+          <div class="tbody">
+            <h3>标题与正文的落差</h3>
+            <p>标题写得很重，正文往往只有一句模糊表述。读完正文再回头看标题，落差本身就是一条值得记录的信息。</p>
+          </div>
+          <span class="ttag">核对</span>
+        </div>
+        <div class="topic">
+          <span class="tno">04</span>
+          <div class="tbody">
+            <h3>评论区的二次加工</h3>
+            <p>热评常常在事实之外加上推测，又被当作事实引用。区分「原文说」与「网友说」，是阅读黑料正能量的基本动作。</p>
+          </div>
+          <span class="ttag">辨别</span>
+        </div>
+        <div class="topic">
+          <span class="tno">05</span>
+          <div class="tbody">
+            <h3>旧料新炒的循环</h3>
+            <p>部分内容每隔一段时间就会被重新包装。留意日期与最初的版本，能避免把旧闻当成新进展。</p>
+          </div>
+          <span class="ttag">时效</span>
+        </div>
+        <div class="topic">
+          <span class="tno">06</span>
+          <div class="tbody">
+            <h3>从围观转向建议</h3>
+            <p>讨论如果只停留在评判个人，很快会散掉；如果落到平台规则或自我保护，就有了可留存的价值。这正是黑料正能量想推的一步。</p>
+          </div>
+          <span class="ttag">落点</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">How To Read</div>
+        <h2>四步读完一条热点</h2>
+        <p class="sec-desc">顺序固定，动作简单。熟练之后，一条热点从点开到形成判断，通常不超过三分钟。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-item">
+          <span class="fnum">1</span>
+          <div>
+            <h3>找最早的那一条</h3>
+            <p>在多个转载中挑出时间最早、信息最完整的版本。它是后续所有内容的母本，也是判断偏差的基准。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="fnum">2</span>
+          <div>
+            <h3>列出可核实的事实</h3>
+            <p>把时间、地点、人物、动作这四类要素单独写下来。凑不齐的，就是这条热点目前的空白处。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="fnum">3</span>
+          <div>
+            <h3>标注推测与情绪</h3>
+            <p>哪些句子是推断，哪些是感受，用不同颜色在心里标出来。黑料正能量鼓励把两者与事实分开存放。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="fnum">4</span>
+          <div>
+            <h3>给出一个正向动作</h3>
+            <p>不转发未核实的截图、在评论区补一句出处、把讨论引向规则本身——任选其一，都算闭环。</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:42px" class="quote-box">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <div>
+          <p>热点会过去，阅读习惯会留下。<strong>黑料正能量</strong>希望留下的是后者：下次再遇到类似的爆料，你知道先看哪里、后看哪里。</p>
+          <p>—— 站点编辑说明</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">FAQ</div>
+        <h2>访客常问的几件事</h2>
+        <p class="sec-desc">关于内容范围与使用方式，先在这里给出直接回答，减少来回查找。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>黑料正能量收录哪些类型的内容？</summary>
+          <div class="answer">以网络热门讨论、爆料条目与公众话题为主，每条内容按「起点—事实—推测—落点」四段组织，只保留可复述的要点，不做主观定性。</div>
+        </details>
+        <details>
+          <summary>页面上的条目会持续更新吗？</summary>
+          <div class="answer">条目按讨论热度排序，热度下降后会被新的线索替换。具体更新节奏取决于当期热点数量，页面不承诺固定频率。</div>
+        </details>
+        <details>
+          <summary>为什么强调「正向出口」？</summary>
+          <div class="answer">围观本身不产生价值，能落到具体动作上的讨论才有留存意义。正向出口可以是补充出处、提醒他人，也可以是对平台规则的合理建议。</div>
+        </details>
+        <details>
+          <summary>内容卡里包含什么？</summary>
+          <div class="answer">内容卡把四步阅读法与六条热点线索整理成一页可打印的清单，方便对照使用。下载入口开放后将替换为正式文件地址。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD BAND -->
+  <section id="download" style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>把阅读清单带走</h2>
+          <p>一页纸的四步法，配合本期六条热点线索。打印出来贴在桌前，下次刷到爆料时先对照一遍。</p>
+        </div>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.6l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.6l-5.4 2.9 1-6.1L3.2 9.1l6.1-.9L12 2.6z" fill="#f2c96b"/>
+            </svg>
+          </span>
+          <span class="brand-text">黑料正能量</span>
+        </div>
+        <p>黑料正能量是一个热点内容阅读站点，用固定的阅读顺序整理网络讨论中的关键线索，帮助访客在信息密集的环境里保持清晰的判断节奏。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容</h4>
+        <a href="#value">解读视角</a>
+        <a href="#topics">热点条目</a>
+        <a href="#method">阅读方式</a>
+        <a href="#faq">常见疑问</a>
+      </div>
+      <div class="foot-col">
+        <h4>使用</h4>
+        <a href="#download">内容卡下载</a>
+        <a href="#top">回到顶部</a>
+        <a href="#topics">条目索引</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 黑料正能量 · 热点内容阅读</span>
+      <span>本站内容为阅读视角整理，不构成对任何个人或事件的定性结论</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
