@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛最新入口-每日大赛入口地址_今日大赛在线观看入口</title>
+<meta name="description" content="每日大赛最新入口页面汇总每日大赛当前可用的访问地址与入口说明，提供今日大赛在线观看入口指引、入口状态提示与常见问题解答，帮助你快速找到每日大赛最新入口并顺利进入浏览。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314182b'/%3E%3Cpath d='M18 40l8-16 6 10 5-7 9 13z' fill='%23ffb648'/%3E%3Ccircle cx='44' cy='20' r='5' fill='%23ff5d73'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0e1120;
+  --bg-soft:#151a2e;
+  --card:#1a2038;
+  --line:#2a3252;
+  --text:#e9ecf6;
+  --muted:#9aa3c0;
+  --gold:#ffb648;
+  --rose:#ff5d73;
+  --cyan:#5ad1c8;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(900px 480px at 82% -8%,rgba(255,93,115,.16),transparent 60%),
+    radial-gradient(760px 420px at 6% 4%,rgba(90,209,200,.12),transparent 60%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(12px);
+  background:rgba(14,17,32,.82);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;min-width:0}
+.logo svg{flex:none;width:34px;height:34px}
+.logo-text{
+  font-size:16px;font-weight:800;letter-spacing:.5px;white-space:nowrap;
+  background:linear-gradient(92deg,var(--gold),var(--rose));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{
+  font-size:14px;color:var(--muted);padding:8px 12px;border-radius:10px;
+  transition:color .2s,background .2s;white-space:nowrap;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--text);background:rgba(255,255,255,.06)}
+.nav .nav-cta{color:#14182b;background:linear-gradient(92deg,var(--gold),#ffd08a);font-weight:700}
+.nav .nav-cta:hover{color:#14182b;background:linear-gradient(92deg,#ffc76d,#ffe0ab)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:7px 11px;font-size:13px}
+
+/* hero */
+.hero{padding:56px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--cyan);
+  border:1px solid rgba(90,209,200,.35);background:rgba(90,209,200,.08);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(90,209,200,.16)}
+h1{
+  font-size:clamp(28px,4.6vw,46px);
+  line-height:1.22;font-weight:900;letter-spacing:.5px;margin-bottom:16px;
+}
+h1 .hl{background:linear-gradient(92deg,var(--gold),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:var(--muted);font-size:15.5px;max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;
+  padding:12px 22px;border-radius:12px;border:1px solid transparent;transition:transform .15s,filter .2s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{color:#14182b;background:linear-gradient(92deg,var(--gold),#ffd08a);box-shadow:0 10px 24px -10px rgba(255,182,72,.7)}
+.btn-ghost{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.03)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:default}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;font-size:13px;color:var(--muted)}
+.hero-meta b{display:block;color:var(--text);font-size:19px;font-weight:800;line-height:1.4}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 44px rgba(0,0,0,.5))}
+
+/* section base */
+section{padding:34px 0}
+.sec-head{margin-bottom:24px}
+.sec-tag{font-size:12.5px;letter-spacing:2px;color:var(--gold);font-weight:700;text-transform:uppercase}
+.sec-head h2{font-size:clamp(20px,2.6vw,27px);font-weight:800;margin-top:6px;letter-spacing:.4px}
+.sec-head p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:46em}
+
+/* entry cards */
+.entry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.entry-card{
+  background:linear-gradient(180deg,var(--card),#161b30);
+  border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+  display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;
+}
+.entry-card::after{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),var(--rose));opacity:.8}
+.entry-card .tag{font-size:12px;color:var(--cyan);letter-spacing:1px}
+.entry-card h3{font-size:17px;font-weight:800}
+.entry-card p{font-size:14px;color:var(--muted);flex:1}
+.entry-card .state{font-size:12.5px;display:inline-flex;align-items:center;gap:6px}
+.state .s-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan)}
+.state.warn .s-dot{background:var(--gold)}
+.entry-link{
+  font-size:14px;font-weight:700;color:var(--gold);display:inline-flex;align-items:center;gap:6px;
+  margin-top:2px;border-bottom:1px dashed rgba(255,182,72,.45);align-self:flex-start;padding-bottom:2px;
+}
+.entry-link:hover{color:#ffd08a}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:step}
+.step{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;position:relative;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  display:flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:9px;font-size:14px;font-weight:800;color:#14182b;
+  background:linear-gradient(92deg,var(--gold),#ffd08a);margin-bottom:12px;
+}
+.step h3{font-size:16px;font-weight:800;margin-bottom:6px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* article block */
+.article-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:28px;align-items:start}
+.prose{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.prose h3{font-size:17px;font-weight:800;margin:20px 0 8px;padding-left:11px;border-left:3px solid var(--gold);line-height:1.4}
+.prose h3:first-child{margin-top:0}
+.prose p{font-size:14.8px;color:#c8cfe2;margin-bottom:10px}
+.prose strong{color:var(--gold);font-weight:700}
+.aside{display:flex;flex-direction:column;gap:14px;position:sticky;top:84px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.note h4{font-size:14.5px;font-weight:800;margin-bottom:10px;color:var(--cyan)}
+.note ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.note li{font-size:13.5px;color:var(--muted);padding-left:14px;position:relative;line-height:1.6}
+.note li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--rose)}
+
+/* faq */
+.faq{display:flex;flex-direction:column;gap:12px}
+details{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;transition:border-color .2s;
+}
+details[open]{border-color:rgba(255,182,72,.45)}
+summary{
+  cursor:pointer;font-size:15px;font-weight:700;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:19px;font-weight:400;line-height:1}
+details[open] summary::after{content:"–"}
+details p{font-size:14.3px;color:var(--muted);margin-top:10px}
+
+/* footer */
+.site-footer{border-top:1px solid var(--line);margin-top:26px;padding:30px 0 34px;background:rgba(10,12,22,.6)}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-start}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-brand svg{width:30px;height:30px}
+.footer-brand span{font-weight:800;font-size:15px;background:linear-gradient(92deg,var(--gold),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;color:var(--muted)}
+.footer-links a:hover{color:var(--gold)}
+.footer-note{font-size:12.5px;color:#6f7898;margin-top:18px;line-height:1.7;max-width:60em}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-art{order:-1;max-width:360px;margin:0 auto}
+  .entry-grid,.steps{grid-template-columns:1fr 1fr}
+  .article-grid{grid-template-columns:1fr}
+  .aside{position:static}
+}
+@media (max-width:680px){
+  .nav{display:none;position:absolute;top:100%;right:16px;left:16px;flex-direction:column;
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;margin-top:8px;align-items:stretch}
+  .nav.open{display:flex}
+  .nav a{padding:11px 12px}
+  .menu-btn{display:block}
+  .site-header{position:relative}
+  .hero{padding:34px 0 26px}
+  .entry-grid,.steps{grid-template-columns:1fr}
+  .btn{padding:11px 18px;font-size:14.5px}
+  .prose{padding:20px}
+  section{padding:26px 0}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="每日大赛最新入口 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="15" fill="#1a2038" stroke="#2a3252" stroke-width="2"/>
+        <path d="M16 42l9-18 7 11 6-8 10 15z" fill="#ffb648"/>
+        <circle cx="45" cy="20" r="5.5" fill="#ff5d73"/>
+      </svg>
+      <span class="logo-text">每日大赛最新入口</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">导航</button>
+    <nav class="nav" id="mainNav" aria-label="主导航">
+      <a href="#entry">入口速达</a>
+      <a href="#steps">进入步骤</a>
+      <a href="#guide">入口说明</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#entry">立即前往</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>今日入口状态 · 可正常访问</span>
+        <h1>每日大赛最新入口</h1>
+        <p class="lead">这里汇总每日大赛最新入口的可访问地址与进入方式，帮助你在地址变动时快速找到当日可用的页面。入口按访问状态标注，并给出地址失效时的替代路径与常见问题答复。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">查看最新入口
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#guide">入口说明</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>3</b>条入口路径</div>
+          <div><b>每日</b>更新核对</div>
+          <div><b>多端</b>浏览器可用</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 340" role="presentation">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffb648"/><stop offset="1" stop-color="#ff5d73"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5ad1c8" stop-opacity=".9"/><stop offset="1" stop-color="#5ad1c8" stop-opacity=".1"/>
+            </linearGradient>
+          </defs>
+          <rect x="24" y="30" width="372" height="280" rx="22" fill="#151a2e" stroke="#2a3252" stroke-width="2"/>
+          <rect x="50" y="58" width="132" height="12" rx="6" fill="#2a3252"/>
+          <rect x="50" y="80" width="86" height="12" rx="6" fill="#2a3252"/>
+          <rect x="50" y="118" width="320" height="66" rx="14" fill="#1a2038" stroke="#2a3252"/>
+          <circle cx="82" cy="151" r="16" fill="url(#g2)"/>
+          <path d="M76 151l5 5 9-10" stroke="#0e1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <rect x="110" y="136" width="150" height="10" rx="5" fill="#3a4468"/>
+          <rect x="110" y="154" width="96" height="9" rx="4.5" fill="#2a3252"/>
+          <rect x="50" y="200" width="152" height="86" rx="14" fill="#1a2038" stroke="#2a3252"/>
+          <path d="M66 268l20-34 14 20 11-14 25 28z" fill="url(#g1)"/>
+          <rect x="218" y="200" width="152" height="86" rx="14" fill="#1a2038" stroke="#2a3252"/>
+          <rect x="236" y="222" width="80" height="10" rx="5" fill="#3a4468"/>
+          <rect x="236" y="242" width="116" height="9" rx="4.5" fill="#2a3252"/>
+          <rect x="236" y="260" width="60" height="9" rx="4.5" fill="#2a3252"/>
+          <circle cx="352" cy="246" r="12" fill="url(#g1)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTRY -->
+  <section id="entry">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Entry</div>
+        <h2>今日可用入口</h2>
+        <p>以下为每日大赛最新入口的几条常见访问路径。若某条路径提示无法打开，可按顺序尝试下一条，或回到本页查看更新后的地址。</p>
+      </div>
+      <div class="entry-grid">
+        <article class="entry-card">
+          <span class="tag">主入口</span>
+          <h3>每日大赛最新入口·主站</h3>
+          <p>首选访问路径，页面加载完整，适合直接浏览当日内容。建议使用最新版浏览器打开。</p>
+          <span class="state"><span class="s-dot"></span>当前可访问</span>
+          <a class="entry-link" href="#guide">查看进入说明 →</a>
+        </article>
+        <article class="entry-card">
+          <span class="tag">备用入口</span>
+          <h3>每日大赛最新入口·备用线路</h3>
+          <p>主线路响应较慢或提示异常时使用，内容与主站一致，可作为日常替代。</p>
+          <span class="state"><span class="s-dot"></span>当前可访问</span>
+          <a class="entry-link" href="#guide">查看进入说明 →</a>
+        </article>
+        <article class="entry-card">
+          <span class="tag">移动端</span>
+          <h3>每日大赛最新入口·手机访问</h3>
+          <p>面向手机和平板优化，竖屏阅读更省流量，适合在移动网络下使用。</p>
+          <span class="state warn"><span class="s-dot"></span>建议 Wi-Fi 环境</span>
+          <a class="entry-link" href="#guide">查看进入说明 →</a>
+        </article>
+      </div>
+      <p style="margin-top:16px;font-size:13.5px;color:var(--muted)">
+        <a class="btn btn-primary" style="margin-top:8px" href="#entry" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">How to</div>
+        <h2>进入每日大赛最新入口的三步</h2>
+        <p>入口地址可能随日期调整，按下面步骤操作可以少走弯路，也不会误入仿冒页面。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认当前地址</h3>
+          <p>先在本页核对入口状态标注，选择标为「当前可访问」的路径，避免使用旧链接。</p>
+        </div>
+        <div class="step">
+          <h3>用正常浏览器打开</h3>
+          <p>复制地址到浏览器地址栏访问，不要通过来源不明的跳转页面二次点击。</p>
+        </div>
+        <div class="step">
+          <h3>异常时切换线路</h3>
+          <p>若页面空白或长时间加载，换用备用入口或移动端路径，通常可恢复正常。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Guide</div>
+        <h2>关于每日大赛最新入口的说明</h2>
+        <p>入口类页面最常被问到的是「为什么昨天能用今天打不开」，下面把原因与处理方式讲清楚。</p>
+      </div>
+      <div class="article-grid">
+        <div class="prose">
+          <h3>入口为什么会变化</h3>
+          <p>每日大赛最新入口属于随日期更新的访问地址集合。站点会根据访问量、线路状态与维护安排调整可用地址，因此收藏的旧链接过一段时间后可能失效，这是入口类页面常见的现象，并不代表内容本身出现问题。</p>
+          <p>遇到打不开的情况，先回到本页确认状态标注，再按主入口、备用入口、移动端的顺序逐个尝试。<strong>每日大赛最新入口</strong>的更新以本页展示为准，其他渠道转发的地址未经核对，不建议直接使用。</p>
+          <h3>如何判断入口是否正常</h3>
+          <p>正常打开时，页面结构完整、内容区域可以正常浏览，不会反复弹出无关窗口。若页面只显示一行报错文字、长时间停在加载状态，或要求填写与浏览无关的个人信息，应立即关闭并改走备用路径。</p>
+          <p>网络环境也会影响访问结果。部分公共网络会限制跳转，此时切换到移动数据或更换浏览器往往能解决问题。把<strong>每日大赛最新入口</strong>加入书签，可以省去每次重新查找的时间。</p>
+          <h3>多端访问的差异</h3>
+          <p>电脑端适合一次性浏览较多内容，屏幕宽度大、翻页少；手机端竖屏阅读更紧凑，但流量消耗与信号稳定性相关。若在移动网络下加载缓慢，可先连接 Wi-Fi 再访问<strong>每日大赛最新入口</strong>。</p>
+          <p>浏览器版本同样值得留意。过旧的版本可能无法正常渲染页面，建议保持浏览器为近期版本，并关闭拦截类插件后再试一次。</p>
+          <h3>使用时的基本习惯</h3>
+          <p>入口页面只承担「找到地址」的作用，不涉及账号与支付。任何以入口名义索要密码、验证码或转账的行为都应直接拒绝。定期回访本页，核对<strong>每日大赛最新入口</strong>的最新状态，是避免使用失效地址最省事的做法。</p>
+        </div>
+        <aside class="aside">
+          <div class="note">
+            <h4>入口检查清单</h4>
+            <ul>
+              <li>状态标注为「当前可访问」</li>
+              <li>地址来自本页，而非聊天转发</li>
+              <li>页面无异常弹窗与额外填写项</li>
+              <li>加载超过 30 秒即切换线路</li>
+              <li>手机端优先在 Wi-Fi 下访问</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h4>快速跳转</h4>
+            <ul>
+              <li><a href="#entry" style="color:var(--gold)">回到今日可用入口</a></li>
+              <li><a href="#steps" style="color:var(--gold)">查看进入步骤</a></li>
+              <li><a href="#faq" style="color:var(--gold)">常见问题解答</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">FAQ</div>
+        <h2>常见问题</h2>
+        <p>整理访问每日大赛最新入口时最常遇到的几种情况，按问题直接查看答复。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>每日大赛最新入口打不开怎么办？</summary>
+          <p>先确认本页入口状态是否仍标为可访问，再依次尝试备用入口与移动端路径。若全部无法打开，通常是本地网络限制，可切换网络或更换浏览器后重试。</p>
+        </details>
+        <details>
+          <summary>为什么入口地址每天都不一样？</summary>
+          <p>入口地址会随线路状态与维护安排调整，属于正常更新。以本页展示的地址为准，不要长期依赖几个月前保存的旧链接。</p>
+        </details>
+        <details>
+          <summary>手机能正常使用每日大赛最新入口吗？</summary>
+          <p>可以。移动端路径针对竖屏做了适配，阅读更紧凑。移动网络信号不稳时，建议连接 Wi-Fi 再访问。</p>
+        </details>
+        <details>
+          <summary>入口页面需要注册或填写信息吗？</summary>
+          <p>不需要。入口页面只用于找到可用地址，不会要求账号密码、验证码或任何支付操作。遇到这类要求请立即关闭页面。</p>
+        </details>
+        <details>
+          <summary>如何第一时间知道地址更新？</summary>
+          <p>将本页加入浏览器书签，每次访问前先核对状态标注，即可同步到最新一轮的入口地址。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="15" fill="#1a2038" stroke="#2a3252" stroke-width="2"/>
+          <path d="M16 42l9-18 7 11 6-8 10 15z" fill="#ffb648"/>
+          <circle cx="45" cy="20" r="5.5" fill="#ff5d73"/>
+        </svg>
+        <span>每日大赛最新入口</span>
+      </div>
+      <nav class="footer-links" aria-label="页尾导航">
+        <a href="#entry">入口速达</a>
+        <a href="#steps">进入步骤</a>
+        <a href="#guide">入口说明</a>
+        <a href="#faq">常见问题</a>
+        <a href="#top">回到顶部</a>
+      </nav>
+    </div>
+    <p class="footer-note">每日大赛最新入口页面用于汇总当日可访问的入口地址与进入方式，入口状态随线路调整更新，请以本页标注为准。页面不涉及账号注册与支付，任何索要敏感信息的行为均与本站无关。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body>
+</html>
