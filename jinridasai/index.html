@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日大赛每日大赛吃瓜-每日大赛吃瓜热点_热门大赛瓜料围观</title>
+<meta name="description" content="今日大赛每日大赛吃瓜聚合每日热门大赛的最新瓜料与网友讨论，按热度梳理事件脉络、争议焦点与围观看点，帮你快速了解今天的大赛热点动态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161b2b'/%3E%3Cpath d='M18 22h28v6H18zm0 10h20v6H18zm0 10h28v6H18z' fill='%23ffb648'/%3E%3Ccircle cx='48' cy='36' r='5' fill='%23ff5d5d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#161b2b;
+  --ink-soft:#39415a;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#e3dfd5;
+  --amber:#ffb648;
+  --amber-deep:#e39417;
+  --red:#e2493f;
+  --muted:#6f7789;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(22,27,43,.96);
+  backdrop-filter:blur(6px);
+  color:#fff;
+  border-bottom:3px solid var(--amber);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-mark{width:36px;height:36px;flex:none}
+.brand-text{
+  font-size:17px;font-weight:700;letter-spacing:.5px;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;
+}
+.brand-text b{color:var(--amber);font-weight:700}
+.nav{display:flex;gap:26px;font-size:15px}
+.nav a{color:#d9dce6;padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover,.nav a:focus{color:var(--amber);border-bottom-color:var(--amber)}
+.menu-btn{display:none;background:none;border:1px solid #4a526b;color:#fff;border-radius:8px;padding:6px 10px;font-size:14px;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 340px at 88% -10%,rgba(255,182,72,.22),transparent 70%),
+    linear-gradient(160deg,#1c2237 0%,#161b2b 55%,#20263c 100%);
+  color:#fff;
+  padding:56px 0 64px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto -10% -40% -10%;height:200px;
+  background:radial-gradient(closest-side,rgba(226,73,63,.20),transparent);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:44px;align-items:start;position:relative;z-index:2}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:2px;color:var(--amber);
+  border:1px solid rgba(255,182,72,.45);border-radius:999px;
+  padding:4px 14px;margin-bottom:18px;
+}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+h1{
+  font-size:38px;line-height:1.28;font-weight:800;letter-spacing:.5px;
+  margin-bottom:16px;
+}
+h1 em{font-style:normal;color:var(--amber)}
+.hero-lead{color:#c8ccda;font-size:16.5px;max-width:36em;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:10px;font-size:15px;font-weight:600;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--amber);color:#241a05}
+.btn-primary:hover{background:#ffc86d;transform:translateY(-1px)}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#eef0f6}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;pointer-events:none}
+.hero-note{margin-top:20px;font-size:13px;color:#8f97ac}
+
+/* heat board */
+.heat-board{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);
+  padding:20px 20px 8px;
+}
+.heat-board h2{font-size:15px;font-weight:700;color:var(--amber);letter-spacing:1px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.heat-board h2 span{font-size:12px;color:#8f97ac;font-weight:400;letter-spacing:0}
+.heat-item{display:flex;gap:12px;padding:11px 0;border-top:1px dashed rgba(255,255,255,.12);font-size:14px}
+.heat-item:first-of-type{border-top:0}
+.heat-rank{width:22px;flex:none;font-weight:800;color:#5d6580;font-family:Georgia,serif}
+.heat-item:nth-child(2) .heat-rank{color:var(--amber)}
+.heat-item:nth-child(3) .heat-rank{color:#ff8a7a}
+.heat-txt{color:#dfe2ea;line-height:1.55}
+.heat-txt small{display:block;color:#8f97ac;font-size:12px;margin-top:2px}
+
+/* ---------- sections ---------- */
+section{padding:58px 0}
+.sec-head{margin-bottom:30px;max-width:44em}
+.sec-label{font-size:13px;letter-spacing:2px;color:var(--amber-deep);font-weight:700;margin-bottom:8px}
+.sec-title{font-size:26px;font-weight:800;line-height:1.35;letter-spacing:.3px}
+.sec-desc{color:var(--muted);margin-top:10px;font-size:15px}
+
+/* today focus */
+.focus-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:24px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:0 1px 0 rgba(22,27,43,.03);
+}
+.card h3{font-size:19px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.card h3::before{content:"";width:5px;height:18px;border-radius:3px;background:var(--amber);flex:none}
+.card p{color:var(--ink-soft);font-size:15px;margin-bottom:12px}
+.card p:last-child{margin-bottom:0}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{
+  font-size:12.5px;color:#5b5238;background:#fdf3df;border:1px solid #f0e2c4;
+  border-radius:999px;padding:3px 11px;
+}
+.focus-side{display:flex;flex-direction:column;gap:16px}
+.mini{
+  background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);
+  border-radius:12px;padding:16px 18px;
+}
+.mini strong{display:block;font-size:15px;margin-bottom:4px}
+.mini span{font-size:13.5px;color:var(--muted)}
+
+/* timeline */
+.timeline{list-style:none;position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--amber),#e8e2d4)}
+.timeline li{position:relative;padding:0 0 24px 6px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--amber-deep);
+}
+.timeline time{font-size:13px;color:var(--amber-deep);font-weight:700;letter-spacing:.5px}
+.timeline strong{display:block;font-size:15.5px;margin:2px 0 3px}
+.timeline p{font-size:14.5px;color:var(--ink-soft)}
+
+/* discussion cards */
+.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.disc-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;
+}
+.disc-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px -14px rgba(22,27,43,.35);border-color:#d9d2c2}
+.disc-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
+.disc-badge{background:#fdeceb;color:var(--red);border-radius:6px;padding:2px 8px;font-weight:700}
+.disc-hot{color:var(--muted)}
+.disc-card h3{font-size:16.5px;font-weight:700;line-height:1.5}
+.disc-card p{font-size:14px;color:var(--ink-soft);flex:1}
+.disc-meta{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+
+/* search */
+.toolbar{
+  background:linear-gradient(150deg,#fffdf7,#fbf6e9);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;margin-bottom:26px;
+}
+.toolbar-row{display:flex;gap:12px;flex-wrap:wrap}
+.toolbar input[type="search"]{
+  flex:1 1 260px;min-width:0;padding:11px 15px;border-radius:10px;
+  border:1px solid #d9d2c2;background:#fff;font-size:15px;color:var(--ink);
+  font-family:inherit;
+}
+.toolbar input[type="search"]:focus{outline:2px solid rgba(255,182,72,.6);border-color:var(--amber-deep)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{
+  font-size:13.5px;border:1px solid #ddd5c3;background:#fff;color:#4c4636;
+  border-radius:999px;padding:5px 14px;cursor:pointer;transition:.18s;font-family:inherit;
+}
+.chip:hover{border-color:var(--amber-deep);color:var(--amber-deep)}
+.chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.result-line{font-size:13.5px;color:var(--muted);margin-top:14px}
+.result-line b{color:var(--ink)}
+.list-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.list-card{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+}
+.list-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.list-card p{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+.list-card .meta{font-size:12.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.empty{
+  grid-column:1/-1;text-align:center;padding:36px 20px;color:var(--muted);
+  background:#fff;border:1px dashed #d9d2c2;border-radius:12px;font-size:14.5px;
+}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.about-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.about-list li{display:flex;gap:12px;font-size:14.8px;color:var(--ink-soft)}
+.about-list li b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+.num{
+  flex:none;width:28px;height:28px;border-radius:8px;background:#fdf3df;color:var(--amber-deep);
+  font-weight:800;font-size:14px;display:grid;place-items:center;margin-top:2px;
+}
+.quote{
+  background:var(--ink);color:#e9ebf2;border-radius:var(--radius);padding:26px;
+}
+.quote p{font-size:15px;line-height:1.85;color:#d3d7e3}
+.quote .who{margin-top:14px;font-size:13px;color:#8f97ac}
+
+/* footer */
+.site-footer{
+  background:var(--ink);color:#aeb4c6;padding:40px 0 28px;margin-top:20px;
+  border-top:3px solid var(--amber);
+}
+.foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:16px}
+.foot-links{display:flex;gap:22px;font-size:14px;flex-wrap:wrap}
+.foot-links a:hover{color:var(--amber)}
+.foot-bottom{padding-top:18px;font-size:13px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.foot-bottom span{color:#767e94}
+
+@media(max-width:900px){
+  .hero-grid,.focus-grid,.about-grid{grid-template-columns:1fr}
+  .disc-grid{grid-template-columns:1fr 1fr}
+  h1{font-size:31px}
+}
+@media(max-width:680px){
+  .nav{display:none}
+  .nav.open{display:flex;position:absolute;top:66px;left:0;right:0;background:#161b2b;flex-direction:column;gap:0;padding:8px 20px 16px;border-bottom:3px solid var(--amber)}
+  .nav.open a{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .menu-btn{display:block}
+  .brand-text{font-size:15px}
+  .hero{padding:38px 0 46px}
+  h1{font-size:27px}
+  .hero-lead{font-size:15px}
+  section{padding:42px 0}
+  .sec-title{font-size:22px}
+  .disc-grid,.list-grid{grid-template-columns:1fr}
+  .card,.toolbar{padding:20px}
+  .foot-top{flex-direction:column}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="今日大赛每日大赛吃瓜 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#ffb648"/>
+        <path d="M16 20h32v7H16zM16 30h22v7H16zM16 40h32v7H16z" fill="#161b2b"/>
+        <circle cx="47" cy="33.5" r="6" fill="#e2493f"/>
+      </svg>
+      <span class="brand-text">今日大赛每日大赛吃瓜</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="#today">今日焦点</a>
+      <a href="#line">瓜料脉络</a>
+      <a href="#board">围观现场</a>
+      <a href="#search">瓜料检索</a>
+      <a href="#about">怎么看</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">菜单</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker"><span class="dot"></span>每日更新 · 大赛热点围观</span>
+        <h1 id="hero-title">今日大赛每日大赛吃瓜</h1>
+        <p class="hero-lead">每天一堆大赛轮番上演，谁翻车、谁逆袭、谁被网友扒出旧账——这里把散落在各处的瓜料按热度收拢，先看结论，再顺着脉络往下读。今日大赛每日大赛吃瓜，讲的是围观效率。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">看今日焦点</a>
+          <a class="btn btn-ghost" href="#search">检索往期瓜料</a>
+          <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+        <p class="hero-note">页面内容按公开讨论整理，热度与观点随时间变化，请以最新讨论为准。</p>
+      </div>
+
+      <aside class="heat-board" aria-labelledby="heat-title">
+        <h2 id="heat-title">今日热度榜 <span>实时围观</span></h2>
+        <div class="heat-item">
+          <span class="heat-rank">01</span>
+          <div class="heat-txt">评委打分口径被质疑<small>多个讨论帖指向同一场评审环节</small></div>
+        </div>
+        <div class="heat-item">
+          <span class="heat-rank">02</span>
+          <div class="heat-txt">选手赛前发言被翻出<small>旧视频与本场表现形成对照</small></div>
+        </div>
+        <div class="heat-item">
+          <span class="heat-rank">03</span>
+          <div class="heat-txt">晋级名单出现意外名字<small>讨论集中在规则细节</small></div>
+        </div>
+        <div class="heat-item">
+          <span class="heat-rank">04</span>
+          <div class="heat-txt">现场收音事故片段流传<small>官方尚未回应</small></div>
+        </div>
+        <div class="heat-item">
+          <span class="heat-rank">05</span>
+          <div class="heat-txt">观众席反应成为二次素材<small>衍生讨论多于原事件</small></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TODAY FOCUS -->
+  <section id="today">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label">今日焦点</div>
+        <h2 class="sec-title">今天这场大赛，瓜主要长在哪</h2>
+        <p class="sec-desc">同一场比赛，观众关心的往往不是结果本身，而是结果怎么来的。以下三条是今天被讨论最多的切口。</p>
+      </div>
+
+      <div class="focus-grid">
+        <article class="card">
+          <h3>评审环节的口径之争</h3>
+          <p>争议起点并不复杂：同一组作品在不同评委手里的分差过大，观众据此怀疑评分标准没有统一。支持方认为分差属于审美差异的正常范围，质疑方则指出往届同类环节分差明显更小。</p>
+          <p>目前能确认的是分差本身，至于是否存在规则之外的沟通，双方都只有推测。围绕这一点，今日大赛每日大赛吃瓜的讨论已经从「分高不高」转向「分怎么打出来的」。</p>
+          <div class="tag-row">
+            <span class="tag">评分标准</span>
+            <span class="tag">分差对照</span>
+            <span class="tag">往届对比</span>
+          </div>
+        </article>
+
+        <div class="focus-side">
+          <div class="mini">
+            <strong>选手旧料被翻出</strong>
+            <span>赛前一段采访与本场表现被剪在一起传播，讨论点在于「说法前后是否一致」。</span>
+          </div>
+          <div class="mini">
+            <strong>晋级名单的意外项</strong>
+            <span>名单中一个此前讨论度不高的名字进入下一轮，规则细节成为追问重点。</span>
+          </div>
+          <div class="mini">
+            <strong>现场片段二次传播</strong>
+            <span>收音事故的短视频播放量远高于原直播，衍生解读已超过事件本身。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="line">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label">瓜料脉络</div>
+        <h2 class="sec-title">一件事怎么发酵成一片讨论</h2>
+        <p class="sec-desc">围观最怕只看切片。按时间顺序把关键节点摆出来，判断会稳一些。</p>
+      </div>
+
+      <div class="focus-grid">
+        <div class="card">
+          <ol class="timeline">
+            <li>
+              <time>阶段一 · 赛后当天</time>
+              <strong>分差截图流出</strong>
+              <p>有观众把评委打分表截图发到讨论区，几组明显偏离均值的分数最先被注意到。</p>
+            </li>
+            <li>
+              <time>阶段二 · 次日</time>
+              <strong>往届数据被翻出来对比</strong>
+              <p>网友整理出前几届同类环节的分差区间，作为「这次是否异常」的参照系。</p>
+            </li>
+            <li>
+              <time>阶段三 · 第三天</time>
+              <strong>选手赛前发言加入讨论</strong>
+              <p>一段赛前采访被重新剪辑传播，讨论从评分扩散到选手本人的表达一致性。</p>
+            </li>
+            <li>
+              <time>阶段四 · 持续中</time>
+              <strong>官方未作说明，讨论转向规则本身</strong>
+              <p>由于没有正式回应，话题重心逐渐从单场结果转移到评审流程是否公开。</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="focus-side">
+          <div class="card" style="border-left:4px solid var(--amber)">
+            <h3>脉络里值得留意的三点</h3>
+            <p>第一，最初的信息源是截图而非完整记录，截图之外的上下文容易被忽略。</p>
+            <p>第二，往届数据对比是目前最有力的参照，但样本量有限，不宜直接当作结论。</p>
+            <p>第三，讨论重心的转移往往意味着原始问题没有被回答。今日大赛每日大赛吃瓜的价值，也正在于把这种转移记录下来。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD -->
+  <section id="board">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label">围观现场</div>
+        <h2 class="sec-title">讨论区里在聊什么</h2>
+        <p class="sec-desc">不同立场的人关注点完全不同。下面三类讨论，构成了今天大部分围观流量。</p>
+      </div>
+
+      <div class="disc-grid">
+        <article class="disc-card">
+          <div class="disc-top"><span class="disc-badge">质疑派</span><span class="disc-hot">讨论上升</span></div>
+          <h3>「分差这么大，标准到底在哪」</h3>
+          <p>核心诉求是公开评分细则与评委构成。这一派不否认审美差异，但要求把差异放进可比较的框架里。</p>
+          <div class="disc-meta">关注点：规则透明度</div>
+        </article>
+
+        <article class="disc-card">
+          <div class="disc-top"><span class="disc-badge" style="background:#eaf3ec;color:#2f7a4a">理性派</span><span class="disc-hot">稳步增长</span></div>
+          <h3>「先把完整录像看完再下判断」</h3>
+          <p>主张回到完整素材，反对用十几秒切片定性。这一派贡献了大量时间轴与原始链接。</p>
+          <div class="disc-meta">关注点：信息完整性</div>
+        </article>
+
+        <article class="disc-card">
+          <div class="disc-top"><span class="disc-badge" style="background:#eef0f6;color:#4a5270">吃瓜派</span><span class="disc-hot">热度最高</span></div>
+          <h3>「旧视频和这次的发言对不上」</h3>
+          <p>把注意力放在选手过往言论上，讨论更热闹，但与评审争议的关联度其实有限。</p>
+          <div class="disc-meta">关注点：人物前后一致性</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section id="search">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label">瓜料检索</div>
+        <h2 class="sec-title">按关键词找你想看的那一场</h2>
+        <p class="sec-desc">输入大赛名称或争议点，下方条目会立即筛选。所有内容直接写在页面里，无需跳转。</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-row">
+          <input type="search" id="q" placeholder="输入大赛名称、关键词，如：评分、晋级、旧视频" aria-label="搜索瓜料条目">
+          <button class="btn btn-primary" id="resetBtn" type="button" style="color:#241a05">显示全部</button>
+        </div>
+        <div class="chips" id="chips">
+          <button class="chip active" type="button" data-kw="">全部</button>
+          <button class="chip" type="button" data-kw="评分">评分争议</button>
+          <button class="chip" type="button" data-kw="晋级">晋级名单</button>
+          <button class="chip" type="button" data-kw="旧视频">旧视频</button>
+          <button class="chip" type="button" data-kw="现场">现场事故</button>
+          <button class="chip" type="button" data-kw="规则">规则讨论</button>
+        </div>
+        <p class="result-line">当前显示 <b id="count">6</b> 条瓜料</p>
+      </div>
+
+      <div class="list-grid" id="list">
+        <article class="list-card" data-tags="评分 规则 评审">
+          <h3>评审分差被截图对比</h3>
+          <p>同一组作品在不同评委手中分差超过预期区间，观众据此要求公开评分细则。</p>
+          <div class="meta"><span>关键词：评分</span><span>状态：持续讨论</span></div>
+        </article>
+
+        <article class="list-card" data-tags="晋级 名单 规则">
+          <h3>晋级名单出现意外名字</h3>
+          <p>一个此前讨论度不高的选手进入下一轮，焦点落在轮次规则的具体表述上。</p>
+          <div class="meta"><span>关键词：晋级</span><span>状态：待说明</span></div>
+        </article>
+
+        <article class="list-card" data-tags="旧视频 选手 采访">
+          <h3>赛前采访旧视频被翻出</h3>
+          <p>旧视频中的表述与本场表现被剪在一起传播，讨论点在于前后是否一致。</p>
+          <div class="meta"><span>关键词：旧视频</span><span>状态：二次传播</span></div>
+        </article>
+
+        <article class="list-card" data-tags="现场 事故 收音">
+          <h3>现场收音事故片段流传</h3>
+          <p>直播中的收音问题被剪成短视频，播放量高于原直播，衍生解读不断增多。</p>
+          <div class="meta"><span>关键词：现场</span><span>状态：片段扩散</span></div>
+        </article>
+
+        <article class="list-card" data-tags="规则 评审 流程">
+          <h3>评审流程是否公开引讨论</h3>
+          <p>在缺少正式说明的情况下，话题重心从单场结果转向流程透明度本身。</p>
+          <div class="meta"><span>关键词：规则</span><span>状态：长期议题</span></div>
+        </article>
+
+        <article class="list-card" data-tags="评分 观众 现场">
+          <h3>观众席反应成二次素材</h3>
+          <p>现场观众的表情与反应被单独剪辑，衍生讨论的热度一度超过原事件。</p>
+          <div class="meta"><span>关键词：评分</span><span>状态：衍生内容</span></div>
+        </article>
+
+        <p class="empty" id="empty" hidden>没有匹配的瓜料，换个关键词试试，比如「评分」或「晋级」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-label">怎么看</div>
+        <h2 class="sec-title">围观大赛瓜料的三条基本线</h2>
+        <p class="sec-desc">今日大赛每日大赛吃瓜不是替谁下结论，而是把可核对的部分和推测的部分分开摆。</p>
+      </div>
+
+      <div class="about-grid">
+        <ul class="about-list">
+          <li>
+            <span class="num">1</span>
+            <div><b>先看原始素材，再看切片</b>短视频与截图决定了讨论的第一印象，但完整记录才能判断上下文是否被省略。</div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div><b>区分「事实」与「推测」</b>分差是事实，分差为何产生是推测。把两者混在一起，讨论就会跑偏。</div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div><b>留意话题重心的转移</b>当讨论从结果转向人物旧料，往往说明原始问题还没有被回答，这正是需要留意的地方。</div>
+          </li>
+        </ul>
+
+        <div class="quote">
+          <p>「大赛的瓜之所以耐吃，是因为它同时装着规则、审美和人的情绪。只看情绪容易上头，只看规则又太干。今日大赛每日大赛吃瓜想做的，是把两边都摆出来，让人自己判断。」</p>
+          <p class="who">—— 栏目编辑手记</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#ffb648"/>
+          <path d="M16 20h32v7H16zM16 30h22v7H16zM16 40h32v7H16z" fill="#161b2b"/>
+        </svg>
+        今日大赛每日大赛吃瓜
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#today">今日焦点</a>
+        <a href="#line">瓜料脉络</a>
+        <a href="#board">围观现场</a>
+        <a href="#search">瓜料检索</a>
+        <a href="#about">怎么看</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>今日大赛每日大赛吃瓜 · 每日收拢大赛热点与网友讨论</span>
+      <span>内容按公开讨论整理，仅供围观参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('nav');
+  menuBtn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    });
+  });
+
+  var q=document.getElementById('q');
+  var chips=document.getElementById('chips');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#list .list-card'));
+  var empty=document.getElementById('empty');
+  var count=document.getElementById('count');
+  var resetBtn=document.getElementById('resetBtn');
+  var activeKw='';
+
+  function apply(){
+    var term=(q.value||'').trim().toLowerCase();
+    var kw=activeKw.toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var tags=(c.getAttribute('data-tags')||'').toLowerCase();
+      var text=(c.textContent||'').toLowerCase();
+      var okKw=!kw||tags.indexOf(kw)>-1;
+      var okTerm=!term||tags.indexOf(term)>-1||text.indexOf(term)>-1;
+      var show=okKw&&okTerm;
+      c.style.display=show?'':'none';
+      if(show) shown++;
+    });
+    empty.hidden=shown!==0;
+    count.textContent=shown;
+  }
+
+  q.addEventListener('input',apply);
+  resetBtn.addEventListener('click',function(){
+    q.value='';
+    activeKw='';
+    chips.querySelectorAll('.chip').forEach(function(b){b.classList.remove('active');});
+    chips.querySelector('.chip').classList.add('active');
+    apply();
+  });
+  chips.addEventListener('click',function(e){
+    var btn=e.target.closest('.chip');
+    if(!btn) return;
+    chips.querySelectorAll('.chip').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    activeKw=btn.getAttribute('data-kw')||'';
+    apply();
+  });
+  apply();
+})();
+</script>
+</body>
+                                                 </html>
