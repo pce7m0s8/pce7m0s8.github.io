@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>www.yandex.com-俄罗斯搜索门户与Yandex服务入口_搜索引擎_邮箱_地图_翻译</title>
+<meta name="description" content="www.yandex.com 是 Yandex 的英文国际入口，提供网页搜索、Yandex Mail 邮箱、地图、翻译与图片搜索等常用服务。本页梳理该域名的入口定位、主要功能与使用路径，帮助访客快速进入需要的服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8271f'/%3E%3Ccircle cx='32' cy='27' r='9' fill='%23fff'/%3E%3Cpath d='M27 34l-6 18h6l3-12 3 12h6l-6-18z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --red:#e8271f;
+  --red-deep:#b81b14;
+  --ink:#16181d;
+  --ink-soft:#4a4f5a;
+  --line:#e6e8ee;
+  --bg:#f6f7fa;
+  --white:#ffffff;
+  --radius:16px;
+  --max:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px;}
+h1,h2,h3{margin:0;line-height:1.3;letter-spacing:-.01em;}
+p{margin:0 0 14px;}
+p:last-child{margin-bottom:0;}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:28px;
+  height:68px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:700;font-size:16px;letter-spacing:.2px;
+  color:var(--ink);flex-shrink:0;
+}
+.logo-mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--red),#ff6a2b);
+  display:grid;place-items:center;flex-shrink:0;
+  box-shadow:0 4px 12px rgba(232,39,31,.28);
+}
+.logo-text{white-space:nowrap;}
+.nav{
+  display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;
+}
+.nav a{
+  font-size:14px;color:var(--ink-soft);
+  padding:8px 12px;border-radius:8px;
+  transition:background .18s,color .18s;
+  white-space:nowrap;
+}
+.nav a:hover{background:#f1f2f6;color:var(--ink);}
+.nav a.cta{
+  background:var(--red);color:#fff;font-weight:600;
+  padding:8px 16px;margin-left:6px;
+}
+.nav a.cta:hover{background:var(--red-deep);}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(232,39,31,.10),transparent 70%),
+    radial-gradient(700px 400px at 5% 110%,rgba(255,170,60,.10),transparent 70%),
+    #fff;
+  border-bottom:1px solid var(--line);
+  padding:64px 0 56px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:56px;align-items:center;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--red);
+  background:#fdecea;border:1px solid #f8d3cf;
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--red);}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  font-weight:800;letter-spacing:-.02em;
+  color:var(--ink);word-break:break-all;
+}
+.hero-sub{
+  margin-top:18px;font-size:16px;color:var(--ink-soft);
+  max-width:560px;
+}
+.hero-actions{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:600;
+  padding:12px 22px;border-radius:12px;
+  transition:transform .16s,box-shadow .16s,background .16s;
+}
+.btn-primary{
+  background:var(--red);color:#fff;
+  box-shadow:0 8px 20px rgba(232,39,31,.26);
+}
+.btn-primary:hover{background:var(--red-deep);transform:translateY(-1px);}
+.btn-ghost{
+  background:#fff;color:var(--ink);
+  border:1px solid var(--line);
+}
+.btn-ghost:hover{border-color:#c9ccd6;background:#fafbfd;}
+
+/* search demo */
+.search-card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:20px;padding:22px;
+  box-shadow:0 18px 44px rgba(22,24,29,.08);
+}
+.search-card .sc-title{
+  font-size:13px;font-weight:700;color:var(--ink-soft);
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;
+}
+.search-form{display:flex;gap:8px;}
+.search-form input{
+  flex:1;min-width:0;
+  border:1px solid var(--line);border-radius:10px;
+  padding:11px 14px;font-size:15px;font-family:inherit;
+  color:var(--ink);background:#fbfbfd;outline:none;
+  transition:border-color .16s,box-shadow .16s;
+}
+.search-form input:focus{
+  border-color:var(--red);background:#fff;
+  box-shadow:0 0 0 3px rgba(232,39,31,.12);
+}
+.search-form button{
+  border:0;border-radius:10px;background:var(--ink);color:#fff;
+  font-size:14px;font-weight:600;font-family:inherit;
+  padding:0 18px;cursor:pointer;transition:background .16s;
+}
+.search-form button:hover{background:#000;}
+.sc-hint{
+  margin-top:12px;font-size:13px;color:#8a8f9b;min-height:20px;
+}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.chip{
+  font-size:13px;color:var(--ink-soft);
+  background:#f3f4f8;border-radius:999px;
+  padding:5px 12px;cursor:pointer;
+  transition:background .16s,color .16s;
+  border:1px solid transparent;
+}
+.chip:hover{background:#fdecea;color:var(--red);border-color:#f8d3cf;}
+
+/* sections */
+section{padding:64px 0;}
+.sec-head{max-width:680px;margin-bottom:36px;}
+.sec-tag{
+  font-size:13px;font-weight:700;color:var(--red);
+  letter-spacing:.08em;margin-bottom:10px;
+}
+.sec-head h2{
+  font-size:clamp(23px,3vw,30px);font-weight:800;
+}
+.sec-head p{margin-top:12px;color:var(--ink-soft);font-size:15.5px;}
+
+.services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.svc-card{
+  background:var(--bg);border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px 24px;
+  transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.svc-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 32px rgba(22,24,29,.08);
+  border-color:#d9dce5;
+}
+.svc-icon{
+  width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;margin-bottom:16px;
+  background:#fff;border:1px solid var(--line);
+}
+.svc-card h3{font-size:17px;font-weight:700;margin-bottom:8px;}
+.svc-card p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+.svc-link{
+  display:inline-block;margin-top:14px;
+  font-size:14px;font-weight:600;color:var(--red);
+}
+.svc-link:hover{text-decoration:underline;}
+
+/* entry list */
+.entry{background:var(--bg);}
+.entry-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px;
+}
+.entry-item{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px 26px 24px;
+}
+.entry-item h3{
+  font-size:17px;font-weight:700;margin-bottom:10px;
+  display:flex;align-items:center;gap:10px;
+}
+.entry-item h3 .num{
+  font-size:12px;font-weight:700;color:var(--red);
+  background:#fdecea;border-radius:6px;padding:2px 7px;
+  flex-shrink:0;
+}
+.entry-item p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+/* notes */
+.notes{background:#fff;border-top:1px solid var(--line);}
+.note-grid{
+  display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:start;
+}
+.note-body p{font-size:15.5px;color:var(--ink-soft);}
+.note-body strong{color:var(--ink);}
+.aside-card{
+  background:var(--bg);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+}
+.aside-card h3{font-size:16px;font-weight:700;margin-bottom:14px;}
+.aside-list{list-style:none;margin:0;padding:0;}
+.aside-list li{
+  font-size:14px;color:var(--ink-soft);
+  padding:9px 0;border-bottom:1px dashed #dfe2ea;
+  display:flex;gap:10px;
+}
+.aside-list li:last-child{border-bottom:0;padding-bottom:0;}
+.aside-list li::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--red);flex-shrink:0;margin-top:8px;
+}
+
+/* faq */
+.faq{background:var(--bg);border-top:1px solid var(--line);}
+.faq-list{display:grid;gap:14px;max-width:860px;}
+details{
+  background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:0 22px;
+  transition:border-color .16s;
+}
+details[open]{border-color:#d9dce5;}
+summary{
+  cursor:pointer;list-style:none;
+  padding:18px 0;font-size:15.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+summary::-webkit-details-marker{display:none;}
+summary .plus{
+  width:20px;height:20px;flex-shrink:0;position:relative;
+}
+summary .plus::before,summary .plus::after{
+  content:"";position:absolute;background:var(--red);border-radius:2px;
+  transition:transform .2s;
+}
+summary .plus::before{left:0;top:9px;width:20px;height:2px;}
+summary .plus::after{left:9px;top:0;width:2px;height:20px;}
+details[open] summary .plus::after{transform:rotate(90deg);}
+details .a{
+  padding:0 0 20px;font-size:14.5px;color:var(--ink-soft);
+}
+
+/* footer */
+.site-footer{
+  background:#16181d;color:#b9bdc9;
+  padding:52px 0 36px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;
+}
+.footer-brand{
+  display:flex;align-items:center;gap:10px;
+  font-weight:700;font-size:15px;color:#fff;margin-bottom:14px;
+}
+.footer-brand .logo-mark{width:30px;height:30px;border-radius:8px;}
+.site-footer p{font-size:14px;color:#8f95a3;margin:0;}
+.footer-col h4{
+  font-size:13px;font-weight:700;color:#fff;
+  letter-spacing:.06em;margin:0 0 14px;
+}
+.footer-col ul{list-style:none;margin:0;padding:0;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{font-size:14px;color:#b9bdc9;transition:color .16s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{
+  margin-top:40px;padding-top:22px;
+  border-top:1px solid #282b33;
+  font-size:13px;color:#767c8b;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+/* responsive */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .note-grid{grid-template-columns:1fr;gap:28px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid > .footer-about{grid-column:1 / -1;}
+}
+@media (max-width:720px){
+  .wrap{padding:0 18px;}
+  .header-inner{height:auto;padding:12px 0;flex-wrap:wrap;gap:10px;}
+  .nav{margin-left:0;width:100%;gap:2px;}
+  .nav a{font-size:13px;padding:7px 9px;}
+  .nav a.cta{margin-left:0;}
+  .hero{padding:40px 0 44px;}
+  section{padding:44px 0;}
+  .svc-grid{grid-template-columns:1fr;}
+  .entry-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}
+  .search-form{flex-direction:column;}
+  .search-form button{padding:11px 18px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="www.yandex.com 首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="9" r="4" fill="#fff"/>
+          <path d="M9.5 12.5 7 21h3l1.5-5.5L13 21h3l-2.5-8.5z" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="logo-text">www.yandex.com</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#services">服务入口</a>
+      <a href="#entry">使用路径</a>
+      <a href="#notes">域名说明</a>
+      <a href="#faq">常见问题</a>
+      <a href="#services" class="cta">进入搜索</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker"><span class="dot"></span>Yandex 英文国际入口</span>
+        <h1>www.yandex.com</h1>
+        <p class="hero-sub">www.yandex.com 是 Yandex 面向国际访客的英文域名入口，从这里可以进入网页搜索、Yandex Mail 邮箱、地图、翻译与图片搜索等常用服务。本页把入口定位与主要功能集中说明，方便你按需前往。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services">
+            查看服务入口
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#notes">了解域名区别</a>
+        </div>
+      </div>
+
+      <div class="search-card">
+        <div class="sc-title">搜索入口演示</div>
+        <form class="search-form" id="searchForm" role="search" aria-label="站内功能搜索">
+          <label for="q" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">输入要查找的功能</label>
+          <input id="q" type="search" placeholder="例如：邮箱、地图、翻译" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+        <div class="sc-hint" id="hint" aria-live="polite">输入功能名称，匹配下方服务卡片。</div>
+        <div class="chip-row" id="chips">
+          <span class="chip" data-q="邮箱">邮箱</span>
+          <span class="chip" data-q="地图">地图</span>
+          <span class="chip" data-q="翻译">翻译</span>
+          <span class="chip" data-q="图片">图片</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">SERVICES</div>
+        <h2>www.yandex.com 上的常用服务</h2>
+        <p>Yandex 以搜索起家，逐步扩展到邮箱、地图、翻译与图片检索等方向。下列板块按使用频率整理，点击可跳转到本页对应的说明位置。</p>
+      </div>
+      <div class="svc-grid" id="svcGrid">
+
+        <article class="svc-card" data-tags="搜索 网页 邮箱 mail">
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8271f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </div>
+          <h3>网页搜索</h3>
+          <p>作为入口核心，www.yandex.com 提供面向英文用户的检索界面，支持关键词查询与结果筛选，是多数访客的第一落点。</p>
+          <a class="svc-link" href="#entry">查看使用路径</a>
+        </article>
+
+        <article class="svc-card" data-tags="邮箱 邮件 mail">
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8271f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <h3>Yandex Mail 邮箱</h3>
+          <p>邮箱服务与搜索账号体系相连。已有账号的用户可直接登录，在 www.yandex.com 的入口下切换至邮件界面收发信息。</p>
+          <a class="svc-link" href="#entry">查看使用路径</a>
+        </article>
+
+        <article class="svc-card" data-tags="地图 导航 maps">
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8271f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <h3>Yandex Maps 地图</h3>
+          <p>地图提供地点检索、路线规划与街区信息。对需要了解城市位置与交通的访客，这是 www.yandex.com 之外的独立服务页面。</p>
+          <a class="svc-link" href="#entry">查看使用路径</a>
+        </article>
+
+        <article class="svc-card" data-tags="翻译 translate 语言">
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8271f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8 5v2c0 4-2 7-5 8"/><path d="M6 12c1.5 2.5 3.5 4 6 5"/><path d="M13 20l4-11 4 11"/><path d="M14.5 16h5"/></svg>
+          </div>
+          <h3>Yandex Translate 翻译</h3>
+          <p>翻译服务支持多语种文本互译，常用于阅读俄语或英文材料。它与搜索相互独立，可按需在导航中切换。</p>
+          <a class="svc-link" href="#entry">查看使用路径</a>
+        </article>
+
+        <article class="svc-card" data-tags="图片 图像 images">
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8271f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-4 4 3 3-3 6 5"/></svg>
+          </div>
+          <h3>图片搜索</h3>
+          <p>图片检索可按关键词或图片反查，适合寻找视觉素材与确认图片来源。入口与网页搜索并列，切换成本低。</p>
+          <a class="svc-link" href="#entry">查看使用路径</a>
+        </article>
+
+        <article class="svc-card" data-tags="域名 国际 入口 com">
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8271f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>
+          </div>
+          <h3>国际域名入口</h3>
+          <p>.com 域名以英文界面为主，适合非俄语访客。与俄语主站相比，www.yandex.com 的页面语言与入口路径更直接。</p>
+          <a class="svc-link" href="#notes">查看域名说明</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="entry" id="entry">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">HOW TO USE</div>
+        <h2>从 www.yandex.com 进入各项服务的路径</h2>
+        <p>不同服务位于同一账号体系下，但页面入口各自独立。按下面的顺序操作，可以减少在多个页面之间来回切换。</p>
+      </div>
+      <div class="entry-grid">
+        <article class="entry-item">
+          <h3><span class="num">01</span>先确认访问目标</h3>
+          <p>如果只是查找资料，直接在 www.yandex.com 的搜索框输入关键词即可；若需要收发邮件，则切换到邮箱入口。先明确目的，再选择对应页面。</p>
+        </article>
+        <article class="entry-item">
+          <h3><span class="num">02</span>统一账号登录</h3>
+          <p>搜索、邮箱等服务共用一套账号。登录一次后，在 www.yandex.com 的入口下切换服务通常无需重复验证，适合长期使用者。</p>
+        </article>
+        <article class="entry-item">
+          <h3><span class="num">03</span>按语言选择界面</h3>
+          <p>英文界面在 www.yandex.com 上更常见。若阅读俄语资料有困难，可配合翻译服务使用，再回到搜索结果中核对原文。</p>
+        </article>
+        <article class="entry-item">
+          <h3><span class="num">04</span>收藏常用入口</h3>
+          <p>频繁使用邮箱或地图的用户，可以把对应页面单独收藏。www.yandex.com 作为总入口保留，便于随时回到搜索起点。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes" id="notes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">DOMAIN NOTES</div>
+        <h2>www.yandex.com 与俄语主站的关系</h2>
+      </div>
+      <div class="note-grid">
+        <div class="note-body">
+          <p>Yandex 是俄罗斯的互联网技术公司，业务覆盖搜索、广告、地图、翻译与云服务等方向。其主站长期以俄语用户为主，而 <strong>www.yandex.com</strong> 提供英文界面，面向国际访客与跨境使用者。</p>
+          <p>两个域名在功能上高度重叠，差别主要在于界面语言与默认内容。使用 www.yandex.com 时，搜索结果与导航文字以英文呈现，对不熟悉俄语的访客更友好；若需要检索俄语本地信息，俄语主站往往更直接。</p>
+          <p>需要注意的是，域名只是访问入口，账号、数据与服务能力仍由同一套体系承载。因此，在 www.yandex.com 登录后，邮箱与其他服务的状态与主站保持一致。</p>
+          <p>对于只想快速完成一次检索的访客，www.yandex.com 的页面结构足够简洁；对于需要长期使用邮箱或地图的用户，建议把常用服务页面单独保存，减少每次从入口逐层点击的操作。</p>
+        </div>
+        <aside class="aside-card">
+          <h3>选择入口时看这几点</h3>
+          <ul class="aside-list">
+            <li>界面语言：英文优先选 .com 域名</li>
+            <li>内容范围：本地俄语信息以主站为主</li>
+            <li>账号体系：各服务共用同一账号</li>
+            <li>使用频率：高频服务单独收藏更省步骤</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">FAQ</div>
+        <h2>关于 www.yandex.com 的常见疑问</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>www.yandex.com 和俄语主站是同一个网站吗？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="a">两者属于同一家公司的服务网络，账号与核心数据相通，但域名不同、默认界面语言不同。www.yandex.com 以英文界面为主，俄语主站更偏向本地用户。</div>
+        </details>
+        <details>
+          <summary>访问 www.yandex.com 需要注册账号吗？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="a">单纯使用网页搜索通常不需要登录。若要使用邮箱等与个人数据相关的服务，则需要账号。登录后可在入口下切换不同服务。</div>
+        </details>
+        <details>
+          <summary>在 www.yandex.com 上能直接打开邮箱吗？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="a">可以。邮箱是 Yandex 的常规服务之一，登录账号后从入口切换至邮件界面即可，具体位置随页面版本可能调整。</div>
+        </details>
+        <details>
+          <summary>为什么有时打开 www.yandex.com 会跳转到其他语言页面？<span class="plus" aria-hidden="true"></span></summary>
+          <div class="a">服务方可能根据访问地区或浏览器语言偏好调整默认界面。若希望固定使用英文界面，可在页面设置中手动选择语言。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="footer-brand">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="9" r="4" fill="#fff"/>
+              <path d="M9.5 12.5 7 21h3l1.5-5.5L13 21h3l-2.5-8.5z" fill="#fff"/>
+            </svg>
+          </span>
+          www.yandex.com
+        </div>
+        <p>本页围绕 www.yandex.com 这一英文入口，梳理搜索、邮箱、地图、翻译与图片搜索等服务的定位与使用路径，帮助访客更快找到需要的页面。</p>
+      </div>
+      <div class="footer-col">
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#services">服务入口</a></li>
+          <li><a href="#entry">使用路径</a></li>
+          <li><a href="#notes">域名说明</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>相关说明</h4>
+        <ul>
+          <li><a href="#notes">英文入口与俄语主站</a></li>
+          <li><a href="#entry">账号与登录</a></li>
+          <li><a href="#faq">界面语言切换</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>www.yandex.com 主题信息页 · 内容仅作入口说明</span>
+      <span>页面信息以服务方实际界面为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var hint = document.getElementById('hint');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#svcGrid .svc-card'));
+
+  function filter(q){
+    q = (q || '').trim().toLowerCase();
+    var hit = 0;
+    cards.forEach(function(card){
+      var text = (card.textContent + ' ' + (card.getAttribute('data-tags') || '')).toLowerCase();
+      var show = !q || text.indexOf(q) !== -1;
+      card.style.display = show ? '' : 'none';
+      if(show) hit++;
+    });
+    if(!q){
+      hint.textContent = '输入功能名称，匹配下方服务卡片。';
+    } else if(hit === 0){
+      hint.textContent = '没有匹配到「' + q + '」，可尝试邮箱、地图、翻译或图片。';
+    } else {
+      hint.textContent = '找到 ' + hit + ' 个相关服务。';
+    }
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    filter(input.value);
+    document.getElementById('services').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  input.addEventListener('input', function(){ filter(input.value); });
+
+  document.getElementById('chips').addEventListener('click', function(e){
+    var chip = e.target.closest('.chip');
+    if(!chip) return;
+    input.value = chip.getAttribute('data-q');
+    filter(input.value);
+    document.getElementById('services').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+</script>
+</body>
+  </html>
